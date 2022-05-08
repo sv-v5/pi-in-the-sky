@@ -3,7 +3,7 @@ class Pie {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.r = 32;
+    this.r = 44;  //32;
     this.yspeed = 0;
     this.digit = floor(random(10));
     this.angle = random(TWO_PI);
@@ -14,7 +14,7 @@ class Pie {
     push();
     
     translate(this.x, this.y);
-    rotate(this.angle);
+    // rotate(this.angle);
     imageMode(CENTER)
     image(Pie.pies[this.colour][this.digit],0,0,this.r*2,this.r*2)
     
@@ -42,7 +42,7 @@ class Pie {
   
   update() {
     this.y = this.y + this.yspeed;
-    this.yspeed = this.yspeed + 0.2;
+    this.yspeed = this.yspeed + 0.1; //0.2;
   }
   
   static loadImages(){
